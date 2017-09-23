@@ -1,0 +1,53 @@
+.contacts-content {
+    margin-left: 5%;
+}
+
+#google-map {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 55vh;
+}
+
+#fb-like {
+    width: 120px;
+    height: 30px;
+    border: none;
+    overflow: hidden;
+}
+
+.contact-info {
+    margin: 5% 5% 0 5%;
+    .contact-title {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 14px;
+        color: #3fa46a;
+        float: left;
+        margin-top: 15px;
+    }
+    .contact-value {
+        color: black;
+        float: right;
+        width: 100%;
+    }
+    .phone-values {
+        margin-left: 15px;
+        .contact-value {
+            padding-left: 45px;
+        }
+        .contact-title {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+    }
+}
+
+.find-us {
+    margin: 5% -15px;
+    img {
+        width: auto;
+        height: 22px;
+        margin: 10px 2px;
+    }
+}

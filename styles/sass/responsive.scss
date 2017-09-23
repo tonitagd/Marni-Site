@@ -1,0 +1,58 @@
+@media all and (max-device-height: 768px) {
+    div.navbar-header {
+        width: 120px;
+        >a>img {
+            height: 30px;
+        }
+    }
+    .navbar-fixed-top {
+        height: 40px;
+    }
+    .marni-navigation a,
+    .marni-navigation a.active {
+        font-size: 1em;
+    }
+    img.flag {
+        width: 17px;
+        height: 12px;
+    }
+    .marni-navigation a,
+    .marni-navigation a.active {
+        margin: 15px 10px;
+    }
+    .container-parent {
+        .pagetitle {
+            margin-top: 0px;
+        }
+        &:not(.contacts-container):not(.products-container) {
+            .pagetitle {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+@media all and (max-device-width: 1680px) {
+    .content .container,
+    {
+        width: 73vw;
+    }
+    .firms .firm-group:last-child {
+        margin-top: 0px;
+    }
+}
+
+@media (max-device-width: 1280px) {
+    .footer-images img {
+        height: 10px;
+    }
+}
+
+@media all and (min-device-width: 0px) and (max-device-width: 1024px)and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+    .content .container,
+    .firms,
+    .firm-group {
+        width: 100%;
+        height: auto;
+    }
+}

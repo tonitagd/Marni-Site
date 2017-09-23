@@ -1,0 +1,280 @@
+@import "bourbon/_bourbon.scss";
+
+@import "partials/variables.scss"; // colors, fonts etc...
+@import "partials/mixins.scss"; // custom mixins
+@import "partials/layout.scss"; // responsive grid and media queries
+@import "constants.scss";
+
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+}
+
+body {
+    &.overflow-hidden {
+        /* prevent 2 vertical scrollbars on ie and firefox when the cart is visible */
+        overflow: hidden;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+.cd-container {
+    /* this class is used to horizontally align the gallery of items */
+    position: relative;
+    width: 90%;
+    max-width: $L; // breakpoints inside partials > _layout.scss
+    margin: 0 auto;
+
+    &::after {
+        /* clearfix */
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.cd-img-replace {
+    /* replace text with a background-image */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+
+/* -------------------------------- 
+
+xheader 
+
+-------------------------------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+
+    z-index: $header-zindex;
+
+    @include MQ(L) {
+        height: 80px;
+    }
+}
+
+#logo {
+    padding-top: 5px;
+
+    /* delete this property if you don't want your logo to scale down on mobile devices */
+    @include transform(scale(.8));
+
+    @include MQ(L) {
+        padding-top: 20px;
+        position: absolute;
+        /* logo left margin on Dekstop */
+        left: 2.4em;
+        top: 0;
+        @include transform(scale(1));
+    }
+}
+
+#cd-hamburger-menu,
+#languages {
+    position: absolute;
+    top: 0;
+    height: 102%;
+
+    a {
+        width: 60px;
+        height: 100%;
+    }
+}
+
+#cd-hamburger-menu {
+    left: 0;
+
+    a {
+        background: darken($green-color, 5%) url('../../../images/cd-hamburger-menu.svg') no-repeat center center;
+    }
+
+    @include MQ(L) {
+        display: none;
+    }
+}
+
+#languages {
+    right: 0;
+
+    @include MQ(L) {
+        /* cart right margin on desktop */
+        right: 0;
+
+        a {
+            position: relative;
+            width: 100px;
+            border-left: none;
+            img.flag {
+                width: 20px;
+                height: 15px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+#main-nav {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    overflow: hidden;
+
+    /* header height */
+    padding-top: 50px;
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    box-shadow: 0 0 20px rgba(#000, .2);
+
+    z-index: $sidebar-zindex;
+
+    @include MQ(M) {
+        width: 350px;
+    }
+
+    @include MQ(L) {
+        width: 30%;
+
+        /* header height has changed */
+        padding-top: 80px;
+    }
+}
+
+#main-nav {
+    left: -100%;
+    background: #FFF;
+
+    @include transition(left .3s);
+
+    &.speed-in {
+        left: 0;
+    }
+
+    ul {
+
+        a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 1em;
+            border-bottom: 1px solid $border;
+        }
+
+        .current {
+            box-shadow: inset 3px 0 $link;
+        }
+    }
+
+    @include MQ(L) {
+        /* reset main nav style */
+        position: absolute;
+        height: auto;
+        width: auto;
+        left: auto;
+        right: 8em;
+        padding-top: 0;
+        top: 0;
+        background: transparent;
+        box-shadow: none;
+
+        /* header height */
+        line-height: 80px;
+
+        z-index: $header-zindex;
+
+        >li {
+            display: inline-block;
+            margin-left: 1em;
+        }
+
+        ul a {
+            display: inline-block;
+            height: auto;
+            line-height: 1;
+            padding: 0.8em 1.4em;
+            border-bottom: none;
+            @include border-radius;
+        }
+    }
+
+    .no-js & {
+        position: fixed;
+    }
+}
+
+
+/* -------------------------------- 
+
+xgallery 
+
+-------------------------------- */
+
+main {
+    position: relative;
+    min-height: 100%;
+    padding-top: 70px;
+
+    z-index: $main-zindex;
+
+    @include MQ(M) {
+        padding-top: 90px;
+    }
+
+    @include MQ(L) {
+        padding-top: 120px;
+    }
+}
+
+
+/* -------------------------------- 
+
+xkeyframes 
+
+-------------------------------- */
+
+@include keyframes(cd-fade-in) {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@import "main.scss"

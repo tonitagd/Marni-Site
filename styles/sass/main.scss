@@ -1,0 +1,121 @@
+@import "navigation.scss";
+@import "footer.scss";
+@import "about.scss";
+@import "contacts.scss";
+@import "products.scss";
+@import "services.scss";
+@import "icons.scss";
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    min-height: 100% !important;
+    height: 100%;
+    background-color: #f6f6f6;
+    a:hover,
+    a:focus {
+        text-decoration: none;
+    }
+}
+
+.navbar-header {
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+    width: $logo-width;
+    img {
+        &#arrow {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    }
+}
+
+.navbar-header:hover #arrow {
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+
+.transition {
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+}
+/* Custom page header */
+
+div.header {
+    border-bottom: 1px solid $gray-border;
+    margin-bottom: 0px;
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+.container-narrow>hr {
+    margin: 30px 0;
+}
+
+.pagetitle {
+    color: $green-color;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    margin-top: 3rem;
+    margin-bottom: 30px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+}
+
+.container-parent {
+    position: absolute;
+    top: $navigation-height;
+    bottom: $footer-height;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    padding-top: 10px;
+    font-size: 1.2em;
+    margin: auto;
+}
+
+.about-container {
+    .container {
+        height: 100%;
+    }
+    .nicescroll-rails.nicescroll-rails-vr {
+        margin-left: 10px !important;
+    }
+}
+
+.nicescroll-rails.nicescroll-rails-vr {
+    margin-left: -1px;
+}
+
+.fagor-rep {
+    display: inline-block;
+    font-size: 17px;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+@import "responsive";
