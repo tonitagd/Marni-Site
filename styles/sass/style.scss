@@ -247,17 +247,14 @@ xgallery
 main {
     position: relative;
     min-height: 100%;
-    padding-top: 70px;
+    margin-top: 50px;
 
     z-index: $main-zindex;
 
     @include MQ(M) {
-        padding-top: 90px;
+        margin-top: 70px;
     }
 
-    @include MQ(L) {
-        padding-top: 120px;
-    }
 }
 
 

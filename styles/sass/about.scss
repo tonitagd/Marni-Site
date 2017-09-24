@@ -1,3 +1,32 @@
+.banner {
+    height: 60%;
+    background: url(../../../images/header-image.jpg) 30% -10% fixed no-repeat;
+    text-align: center;
+    .vertical-align {
+        position: relative;
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        p {
+            color: #fff;
+            letter-spacing: 2px;
+            margin: 10px 25px;
+            font-size: 17px;
+        }
+        img {
+            width: 200px;
+        }
+    }
+}
+.mobile{
+    .banner {
+         height: 100%;
+    }
+}
+
 .about-info {
     height: calc(100% - 250px);
     .col-md-8 {
