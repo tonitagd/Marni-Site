@@ -1,24 +1,27 @@
-@import "constants.scss";
-.footer {
+footer {
     color: #777;
     border-top: 1px solid $gray-border;
-    bottom: 0px;
+    bottom: 0;
     position: absolute;
     width: 100%;
+    z-index: 2;
 }
 
 .contacts-nav {
     background-color: black;
-    height: $footer-height;
+    height: 100%;
+    float: left;
+    width: 100%;
     color: #cccccc;
     font-size: 1.1em;
     padding: 0 20px;
-    > div.contacts {
+    >div.contacts {
         float: right;
         line-height: $footer-height;
     }
     .location {
         float: right;
+        margin-left: 20px;
         &:hover {
             .icon {
                 color: $hover-green-color;
@@ -37,10 +40,10 @@
         text-decoration: none;
     }
     .icon {
-        height: 30px;
+        height: 25px;
         line-height: 20px;
-        font-size: 20px;
-        margin: auto 5px auto 15px;
+        font-size: 15px;
+        margin: auto 10px auto 5px;
         padding: 3px;
         border: 2px solid $green-color;
         border-radius: 100%;
@@ -56,4 +59,16 @@
 #footer-text {
     font-size: 1.1em;
     text-align: center;
+}
+
+body.mobile {
+    footer {
+        >.contacts-nav>.contacts>div {
+            float: left;
+            margin: 0 auto;
+            &.location .icon {
+                margin-left: 0;
+            }
+        }
+    }
 }

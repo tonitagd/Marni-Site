@@ -13,10 +13,15 @@ html {
 body {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
     min-height: 100% !important;
     height: 100%;
     background-color: #f6f6f6;
+    overflow: hidden;
+    main {
+        min-height: 100% !important;
+        height: 100%;
+        overflow-y: auto;
+    }
     a:hover,
     a:focus {
         text-decoration: none;
@@ -51,6 +56,9 @@ body {
     -o-transition: all 0.8s;
     -webkit-transition: all 0.8s;
 }
+
+
+
 /* Custom page header */
 
 div.header {

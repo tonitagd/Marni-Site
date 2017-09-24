@@ -62,8 +62,16 @@ ul.marni-navigation {
     }
 }
 
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus {
+    background: none;
+    color: #fff;
+    border: none;
+}
+
 .marni-navigation>li>a,
-.marni-navigation>li.open {
+body:not(.mobile) .marni-navigation>li.open {
     a,
     a:hover,
     a:focus,
@@ -121,23 +129,25 @@ ul.marni-navigation {
     }
 }
 
-#main-nav {
-    &.mobile {
+
+body.mobile {
+    #main-nav {
         .marni-navigation {
             width: 100%;
             li {
                 a {
                     color: #5f6f81;
                     font-weight: 300;
-                    line-height: 60px;
-                    margin: 0px;
-                    padding: 0 10px;
-                    border-bottom: 0px;
-                    box-shadow: 0 1px $shadow-color;
+                    line-height: 20px;
+                    height: auto;
+                    min-height: 40px;
+                    margin: auto;
+                    padding: 15px 10px;
+                    border-bottom: 1px solid $shadow-color;
                     &.active {
                         background: darken($green-color, 5%);
                         color: white;
-                        box-shadow: none;
+                        border: none;
                     }
                     .glyphicon-menu-down.left {
                         display: inline-block;
@@ -161,7 +171,10 @@ ul.marni-navigation {
             }
         }
     }
-    .marni-navigation {
+}
+
+body:not(.mobile) #main-nav {
+    >.marni-navigation {
         .sub-menu {
             display: none;
         }
@@ -172,26 +185,28 @@ ul.marni-navigation {
                 margin: 0px;
                 padding: 0px;
                 background-color: white;
+                max-width: 240px;
                 li {
-                    line-height: 60px;
+                    line-height: 25px;
                     a {
                         color: #5f6f81;
                         font-weight: 300;
-                        line-height: 60px;
+                        line-height: 25px;
+                        min-height: 60px;
                         margin: 0px;
-                        padding: 0 10px;
+                        padding: 15px 10px;
                         width: 100%;
                         border-radius: 0px;
                         font-size: 15px;
-                        -webkit-box-shadow: 0px 0px 1px 1px $shadow-color;
-                        -moz-box-shadow: 0px 0px 1px 1px $shadow-color;
-                        box-shadow: 0px 0px 1px 1px $shadow-color;
+                        -webkit-box-shadow: inset 0px -3px 1px 0px $shadow-color;
+                        -moz-box-shadow: inset 0px -3px 1px 0px $shadow-color;
+                        box-shadow: inset 0px -3px 1px 0px $shadow-color;
+                        margin-top: -2px;
                         &:hover,
                         &:focus,
                         &.active {
                             color: white;
                             background: $green-color;
-                            box-shadow: none;
                         }
                     }
                 }

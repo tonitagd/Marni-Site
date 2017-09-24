@@ -44,13 +44,14 @@ function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
 }
 
 function move_navigation( $navigation, $MQ) {
+	var $body = $('body');
 	if ( $(window).width() >= $MQ ) {
 		$navigation.detach();
 		$navigation.appendTo('header');
-		$navigation.removeClass('mobile');
+		$body.removeClass('mobile');
 	} else {
 		$navigation.detach();
 		$navigation.insertAfter('header');
-		$navigation.addClass('mobile');
+		$body.addClass('mobile');
 	}
 }
