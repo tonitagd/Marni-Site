@@ -55,3 +55,14 @@ function move_navigation( $navigation, $MQ) {
 		$body.addClass('mobile');
 	}
 }
+
+function loadLanguage(language){
+	var languages = ['bg','en'];
+	var sitePath = location.pathname;
+
+	languages.forEach(element => {
+	    sitePath = sitePath.replace(element, language);
+	});
+
+	location.pathname = sitePath;
+}

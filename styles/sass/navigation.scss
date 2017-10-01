@@ -144,7 +144,7 @@ body.mobile {
                     margin: auto;
                     padding: 15px 10px;
                     border-bottom: 1px solid $shadow-color;
-                    &.active {
+                    &.active:not(.mobile-not-active) {
                         background: darken($green-color, 5%);
                         color: white;
                         border: none;

@@ -1,37 +1,50 @@
-.services-group {
-    > .row {
-        margin-top: 30px;
-    }
-    .icon {
-        background-color: #000;
-        text-align: center;
-        border-radius: 100%;
-        width: 50px;
-        height: 50px;
-        line-height: 55px;
-        color: #FFF;
-        font-size: 30px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: 2vh;
-        &.icon-manifacture {
-            line-height: 50px;
+.services-container {
+    padding-top: 96px;
+    padding-bottom: 53px;
+    .col-md-6 {
+        figure {
+            float: left;
+            width: 69px;
+            .icon {
+                background-color: #000;
+                text-align: center;
+                border-radius: 100%;
+                width: 50px;
+                height: 50px;
+                line-height: 55px;
+                color: #FFF;
+                font-size: 30px;
+                display: inline-block;
+                vertical-align: middle;
+                &.icon-manifacture {
+                    line-height: 50px;
+                }
+            }
+        }
+        .article {
+            padding-bottom: 75px;
+            section {
+                h3 {
+                    text-transform: uppercase;
+                    padding-bottom: 15px;
+                    font-size: 13px;
+                    line-height: 14px;
+                    letter-spacing: 5px;
+                    color: #000;
+                    font-weight: 900;
+                }
+                p {
+                    color: #555;
+                    font-size: 14px;
+                    line-height: 23px;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                }
+            }
         }
     }
-    .label {
-        font-size: 14px;
-        line-height: 15px;
-        letter-spacing: 5px;
-        color: #000;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-weight: 900;
-        text-transform: uppercase;
-        padding: 0 0 15px 15px;
-        text-align: left;
-        white-space: pre-line;
-    }
-}
 
-.service-content {
-    margin: 2vh 0;
+    .service-content {
+        margin: 2vh 0;
+    }
 }

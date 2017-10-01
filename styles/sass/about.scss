@@ -28,11 +28,9 @@
     }
 }
 
-.about_pan_home {
-    padding: 70px 0;
-    article {
-        padding-right: 70px;
-    }
+.about_pan_home,
+.products-container > .container {
+    padding: 5rem 0;
     aside section {
         margin-bottom: 50px;
         h3 {

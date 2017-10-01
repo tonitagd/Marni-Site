@@ -1,3 +1,15 @@
+.banner-products {
+    height: 60%;
+    background: url(../../../images/emergency-stop/header-image.png) no-repeat;
+    background-size: contain;
+}
+
+.mobile {
+    .banner-products {
+        height: 20%;
+    }
+}
+
 .firms {
     float: left;
 }

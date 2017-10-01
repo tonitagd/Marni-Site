@@ -3,6 +3,7 @@
 @import "about.scss";
 @import "contacts.scss";
 @import "products.scss";
+@import "products-table.scss";
 @import "services.scss";
 @import "icons.scss";
 
@@ -110,7 +111,6 @@ div.header {
 .container {
     overflow: hidden;
     position: relative;
-    font-size: 1.2em;
     margin: auto;
 }
 

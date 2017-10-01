@@ -1,0 +1,107 @@
+.products-container {
+    .container.table {
+        font-weight: 300;
+        line-height: 1.42em;
+        color: #A7A1AE;
+        background-color: #1F2739;
+        text-align: left;
+        overflow: hidden;
+        display: block;
+        overflow-x: auto;
+        padding: 10px;
+        letter-spacing: 2px;
+        h1 {
+            font-size: 3em;
+            font-weight: 300;
+            line-height: 1em;
+            text-align: center;
+            color: #4DC3FA;
+        }
+
+        h2 {
+            font-size: 1em;
+            font-weight: 300;
+            text-align: center;
+            display: block;
+            line-height: 1em;
+            padding-bottom: 2em;
+            color: #FB667A;
+        }
+
+        h2 a {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #FB667A;
+            text-decoration: none;
+        }
+
+        th h1 {
+            font-weight: bold;
+            font-size: 1em;
+            text-align: left;
+            color: #639A88;
+            text-align: center;
+        }
+        td {
+            font-weight: normal;
+            font-size: 1em;
+            -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+            -moz-box-shadow: 0 2px 2px -2px #0E1119;
+            box-shadow: 0 2px 2px -2px #0E1119;
+        }
+
+        td,
+        th {
+            vertical-align: middle;
+            text-align: center;
+        }
+        /* Background-color of the odd rows */
+        tr:nth-child(odd) {
+            background-color: #323C50;
+        }
+        /* Background-color of the even rows */
+        tr:nth-child(even) {
+            background-color: #2C3446;
+        }
+
+        th {
+            background-color: #1F2739;
+        }
+
+        td:first-child {
+            color: #DDB771;
+        }
+
+        tbody tr:hover {
+            td {
+                box-shadow: none;
+                 &:first-child {
+                    color: white;
+                }
+            }
+            background-color: $green-color;
+            color: white;
+            font-weight: bold;
+
+            box-shadow: darken($green-color, 15%) -1px 1px,
+            darken($green-color, 15%) -2px 2px,
+            darken($green-color, 15%) -3px 3px,
+            darken($green-color, 15%) -4px 4px,
+            darken($green-color, 15%) -5px 5px,
+            darken($green-color, 15%) -6px 6px;
+            transform: translate3d(6px, -6px, 0);
+
+            transition-delay: 0s;
+            transition-duration: 0.4s;
+            transition-property: all;
+            transition-timing-function: line;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .container td:nth-child(4),
+        .container th:nth-child(4) {
+            display: none;
+        }
+    }
+}
