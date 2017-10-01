@@ -47,11 +47,11 @@ function move_navigation( $navigation, $MQ) {
 	var $body = $('body');
 	if ( $(window).width() >= $MQ ) {
 		$navigation.detach();
-		$navigation.appendTo('header');
+		$navigation.appendTo('body>header');
 		$body.removeClass('mobile');
 	} else {
 		$navigation.detach();
-		$navigation.insertAfter('header');
+		$navigation.insertAfter('body>header');
 		$body.addClass('mobile');
 	}
 }
