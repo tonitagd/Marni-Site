@@ -18,14 +18,14 @@
         min-height: 250px;
         max-height: 250px;
         text-align: center;
-        border: 1px solid #eeeeee;
+        border: 1px solid $gray-border;
         border-radius: 0;
         margin-bottom: 30px;
-        -webkit-transition: all 0.2s;
-        transition: all 0.2s;
+        @include transition(all, .5s, ease-in-out);
         &:hover {
-            background-color: #e5e5e5;
+            background-color: rgba(68, 175, 79, 0.3);
             cursor: pointer;
+            @include transition(all, .5s, ease-in-out);
         }
         .centered {
             width: 90%;
