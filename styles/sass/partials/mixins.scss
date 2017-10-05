@@ -35,7 +35,7 @@
     border-radius: $radius;
 }
 
-@mixin transition($on, $time, $type:ease-in) {
+@mixin transition($on, $time, $type:ease) {
     -webkit-transition: $on $time $type;
     -moz-transition: $on $time $type;
     -o-transition: $on $time $type;

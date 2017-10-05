@@ -32,27 +32,58 @@
     }
 }
 
-@media all and (max-device-width: 1680px) {
-    .content .container,
-    {
-        width: 73vw;
+@media all and (max-device-height: 1024px) {
+    div.navbar-header {
+        width: 120px;
+        >a>img {
+            height: 30px;
+        }
     }
-    .firms .firm-group:last-child {
-        margin-top: 0px;
+    .navbar-fixed-top {
+        height: 40px;
+    }
+    .marni-navigation a,
+    .marni-navigation a.active {
+        font-size: 1em;
+    }
+    img.flag {
+        width: 22px;
+    }
+    .marni-navigation a,
+    .marni-navigation a.active {
+        margin: 15px 10px;
+    }
+    .container-parent {
+        .pagetitle {
+            margin-top: 0px;
+        }
+        &:not(.contacts-container):not(.products-container) {
+            .pagetitle {
+                margin-bottom: 0px;
+            }
+        }
     }
 }
 
-@media (max-device-width: 1280px) {
-    .footer-images img {
-        height: 10px;
+@media (min-width: 768px) {
+    .mobile {
+        .header .navbar-header,
+        .navbar-nav>li {
+            float: none;
+        }
     }
 }
 
-@media all and (min-device-width: 0px) and (max-device-width: 1024px)and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-    .content .container,
-    .firms,
-    .firm-group {
-        width: 100%;
-        height: auto;
+@media (min-width: 1024px) {
+    .mobile {
+        .navbar-header {
+            width: auto;
+            img {
+                height: 35px;
+            }
+        }
+        img.flag {
+            width: 45px;
+        }
     }
 }
