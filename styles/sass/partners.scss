@@ -1,52 +1,56 @@
-.partners-container{
-  padding-top: 96px;
-  padding-bottom: 53px;
-}
-.partners {
-    margin: 48px 0;
+.partners-container {
+    padding-top: 96px;
+    padding-bottom: 53px;
 
-    .partners-item {
-      position: relative;
-      margin: 0;
-      .partners-item-content {
-        display: inline-block;
-        float: right;
-        width: calc(100% - 100px);
-        padding-left: 30px;
-      }
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
     }
 
-    img {
-      width: 100px;
-      height: 100%;
-      display: inline-block;
+    .zoomIn {
+        -webkit-animation-name: zoomIn;
+        animation-name: zoomIn;
     }
 
-    .partners-item-header {
-      font-size: 13px;
-      line-height: 14px;
-      letter-spacing: 5px;
-      color: #000;
-      font-weight: 900;
+    .thumbnail {
+        min-height: 250px;
+        max-height: 250px;
+        text-align: center;
+        border: 1px solid #eeeeee;
+        border-radius: 0;
+        margin-bottom: 30px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        &:hover {
+            background-color: #e5e5e5;
+            cursor: pointer;
+        }
+        .centered {
+            width: 90%;
+            margin: 45px auto;
+            img {
+                line-height: 100px;
+                display: block;
+                width: 100px;
+                margin: 0 auto;
+                transform: translate(0, 0);
+            }
+            h3 {
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: 900;
+                letter-spacing: 2px;
+                color: #000;
+            }
+            h6 {
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                color: #555;
+            }
+        }
     }
-
-    .partners-item-description {
-        margin-top: 8px;
-        color: #555;
-        font-size: 14px;
-        line-height: 23px;
-        font-weight: 300;
-        letter-spacing: 1px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-  .partners {
-    .partners-item {
-        margin-bottom: 16px;
-    }
-    .partners-item-description,.partners-item-header {
-        font-size: 12px;
-    }
-  }
 }
