@@ -7,24 +7,19 @@
 
     .partners-item {
       position: relative;
-      width: 30%;
-      display: inline-block;
-      margin: 0 30px 10px;
-      .partners-item-content{
-        margin-left: 30px;
+      margin: 0;
+      .partners-item-content {
         display: inline-block;
-        width: calc(100% - 135px);
         float: right;
+        width: calc(100% - 100px);
+        padding-left: 30px;
       }
     }
 
     img {
       width: 100px;
+      height: 100%;
       display: inline-block;
-      position: absolute;
-      margin: auto;
-      top: 0;
-      left: 0;
     }
 
     .partners-item-header {
@@ -45,32 +40,13 @@
     }
 }
 
-@media screen and (max-width: 1152px) {
-    .partners-item {
-        width:50%;
-    }
-}
-
 @media screen and (max-width: 640px) {
-    .design-features {
-        padding:48px 0;
-    }
-
+  .partners {
     .partners-item {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        text-align: center;
         margin-bottom: 16px;
     }
-
-    img {
-        height: 80px;
-        width: 80px;
-    }
-
     .partners-item-description,.partners-item-header {
         font-size: 12px;
     }
+  }
 }
