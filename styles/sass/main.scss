@@ -51,10 +51,7 @@ body {
 }
 
 .transition {
-    -moz-transition: all 0.8s;
-    -ms-transition: all 0.8s;
-    -o-transition: all 0.8s;
-    -webkit-transition: all 0.8s;
+    @include transition(all, .8s);
 }
 
 
