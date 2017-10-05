@@ -179,7 +179,7 @@ body > header {
     left: -100%;
     background: #FFF;
 
-    @include transition(left .3s);
+    @include transition(left, 0.3s);
 
     &.speed-in {
         left: 0;
