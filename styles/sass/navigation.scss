@@ -95,23 +95,17 @@ body:not(.mobile) .marni-navigation>li.open {
         -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
         -moz-transition: opacity 0.3s, -moz-transform 0.3s;
         transition: opacity 0.3s, transform 0.3s;
-        -webkit-transform: translateY(-10px);
-        -moz-transform: translateY(-10px);
-        transform: translateY(-10px);
+        @include translate(0, -10px);
     }
     a::before,
     &::before {
         top: 0;
-        -webkit-transform: translateY(-10px);
-        -moz-transform: translateY(-10px);
-        transform: translateY(-10px);
+        @include translate(0, -10px);
     }
     a::after,
     &::after {
         bottom: 0;
-        -webkit-transform: translateY(10px);
-        -moz-transform: translateY(10px);
-        transform: translateY(10px);
+        @include translate(0, 10px);
     }
 
     a::before,
@@ -123,9 +117,7 @@ body:not(.mobile) .marni-navigation>li.open {
     &:focus::after,
     &.active::after {
         opacity: 1;
-        -webkit-transform: translateY(0px);
-        -moz-transform: translateY(0px);
-        transform: translateY(0px);
+        @include translate(0, 0);
     }
 }
 

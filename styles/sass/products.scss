@@ -19,35 +19,6 @@ body:not(.mobile) .product-images-container {
     .product-images-container {
         text-align: center;
     }
-    header {
-        padding-bottom: 50px;
-        h3 {
-            font-size: 27px;
-            line-height: 28px;
-            text-transform: uppercase;
-            color: #130e14;
-            font-weight: 700;
-            font-family: 'Source Sans Pro', sans-serif;
-            padding-bottom: 6px;
-            letter-spacing: 3px;
-        }
-        h6 {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 13px;
-            line-height: 14px;
-            text-transform: uppercase;
-            color: #232024;
-            letter-spacing: 5px
-        }
-    }
-    p {
-        font-size: 15px;
-        line-height: 23px;
-        letter-spacing: 2px;
-        color: #555;
-        font-weight: 300;
-        padding-bottom: 23px
-    }
     .product-images {
         &.technical-images ul li {
             width: 100%;
@@ -57,9 +28,7 @@ body:not(.mobile) .product-images-container {
             padding: 0;
             li {
                 display: inline-block;
-                -moz-box-shadow: 0 0 0 1px #fff;
-                -webkit-box-shadow: 0 0 0 1px #fff;
-                box-shadow: 0 0 0 1px #fff;
+                @include box-shadow(0, 0, 0, 1px, #fff);
                 overflow: hidden;
                 position: relative;
 
@@ -79,28 +48,19 @@ body:not(.mobile) .product-images-container {
                     position: absolute;
                     top: 0;
                     width: 100%;
-                    -moz-transition: opacity, 0.3s;
-                    -o-transition: opacity, 0.3s;
-                    -webkit-transition: opacity, 0.3s;
-                    transition: opacity, 0.3s;
+                    @include transition(opacity, 0.3s);
                 }
                 section {
                     position: absolute;
                     text-align: center;
                     top: 50%;
                     width: 100%;
-                    -moz-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
-                    -webkit-transform: translateY(-50%);
-                    transform: translateY(-50%);
+                    @include translate(0, -50%);
                 }
                 h5,
                 p,
                 img {
-                    -moz-transition: all, 0.5s;
-                    -o-transition: all, 0.5s;
-                    -webkit-transition: all, 0.5s;
-                    transition: all, 0.5s;
+                    @include transition(all, 0.5s);
                 }
                 h5,
                 p {
@@ -110,23 +70,14 @@ body:not(.mobile) .product-images-container {
                 }
                 h5 {
                     margin-bottom: 5px;
-                    -moz-transform: translate3d(0, -200%, 0);
-                    -ms-transform: translate3d(0, -200%, 0);
-                    -webkit-transform: translate3d(0, -200%, 0);
-                    transform: translate3d(0, -200%, 0);
+                    @include translate3d(0, -200%, 0);
                 }
                 p {
-                    -moz-transform: translate3d(0, 200%, 0);
-                    -ms-transform: translate3d(0, 200%, 0);
-                    -webkit-transform: translate3d(0, 200%, 0);
-                    transform: translate3d(0, 200%, 0);
+                    @include translate3d(0, 200%, 0);
                 }
                 &:hover {
                     img {
-                        -moz-transform: scale(1.2);
-                        -ms-transform: scale(1.2);
-                        -webkit-transform: scale(1.2);
-                        transform: scale(1.2);
+                        @include scale(1.2);
                     }
                     figcaption {
                         opacity: 1;
@@ -134,10 +85,7 @@ body:not(.mobile) .product-images-container {
                     figcaption h5,
                     figcaption p {
                         opacity: 1;
-                        -moz-transform: translate3d(0, 0, 0);
-                        -ms-transform: translate3d(0, 0, 0);
-                        -webkit-transform: translate3d(0, 0, 0);
-                        transform: translate3d(0, 0, 0);
+                        @include translate3d(0, 0, 0);
                     }
                 }
             }

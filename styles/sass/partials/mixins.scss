@@ -35,9 +35,55 @@
     border-radius: $radius;
 }
 
+@mixin box-shadow($x, $y, $blur, $speed, $color) {
+    -moz-box-shadow: $x $y $blur $speed $color;
+    -webkit-box-shadow: $x $y $blur $speed $color;
+    box-shadow: $x $y $blur $speed $color;
+}
+
 @mixin transition($on, $time, $type:ease) {
     -webkit-transition: $on $time $type;
     -moz-transition: $on $time $type;
     -o-transition: $on $time $type;
     transition: $on $time $type;
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+// Rotate
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// Translate
+@mixin translate3d($x, $y, $z) {
+    @include transform(translate3d($x, $y, $z));
+}
+
+// Skew
+@mixin skew($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    transform-origin: $origin;
 }
