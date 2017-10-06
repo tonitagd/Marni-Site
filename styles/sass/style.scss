@@ -35,27 +35,6 @@ img {
 }
 
 
-/* --------------------------------
-
-Modules - reusable parts of our design
-
--------------------------------- */
-
-.cd-container {
-    /* this class is used to horizontally align the gallery of items */
-    position: relative;
-    width: 90%;
-    max-width: $L; // breakpoints inside partials > _layout.scss
-    margin: 0 auto;
-
-    &::after {
-        /* clearfix */
-        content: '';
-        display: table;
-        clear: both;
-    }
-}
-
 .cd-img-replace {
     /* replace text with a background-image */
     display: inline-block;
@@ -83,22 +62,6 @@ body > header {
 
     @include MQ(L) {
         height: 80px;
-    }
-}
-
-#logo {
-    padding-top: 5px;
-
-    /* delete this property if you don't want your logo to scale down on mobile devices */
-    @include transform(scale(.8));
-
-    @include MQ(L) {
-        padding-top: 20px;
-        position: absolute;
-        /* logo left margin on Dekstop */
-        left: 2.4em;
-        top: 0;
-        @include transform(scale(1));
     }
 }
 
@@ -238,12 +201,6 @@ body > header {
     }
 }
 
-
-/* --------------------------------
-
-xgallery
-
--------------------------------- */
 
 main {
     position: relative;

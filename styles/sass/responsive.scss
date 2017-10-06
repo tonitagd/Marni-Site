@@ -20,16 +20,6 @@
     .marni-navigation a.active {
         margin: 15px 10px;
     }
-    .container-parent {
-        .pagetitle {
-            margin-top: 0px;
-        }
-        &:not(.contacts-container):not(.products-container) {
-            .pagetitle {
-                margin-bottom: 0px;
-            }
-        }
-    }
 }
 
 @media all and (max-device-height: 1024px) {
@@ -53,24 +43,17 @@
     .marni-navigation a.active {
         margin: 15px 10px;
     }
-    .container-parent {
-        .pagetitle {
-            margin-top: 0px;
-        }
-        &:not(.contacts-container):not(.products-container) {
-            .pagetitle {
-                margin-bottom: 0px;
-            }
-        }
-    }
 }
 
 @media (min-width: 768px) {
     .mobile {
-        .header .navbar-header,
+        header .navbar-header,
         .navbar-nav>li {
             float: none;
         }
+    }
+    main {
+        margin-top: 50px;
     }
 }
 

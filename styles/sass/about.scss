@@ -5,11 +5,7 @@
     .vertical-align {
         position: relative;
         top: 50%;
-        -moz-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
+        @include translate(0, -50%);
         p {
             color: #fff;
             letter-spacing: 2px;
@@ -29,27 +25,8 @@
 }
 
 .about_pan_home,
-.products-container > .container {
+.products-container>.container {
     padding: 5rem 0;
-    aside section {
-        margin-bottom: 50px;
-        h3 {
-            font-weight: 900;
-            color: #000;
-            padding-bottom: 14px;
-            font-size: 13px;
-            line-height: 14px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-        }
-    }
-    p {
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 23px;
-        color: #4e4a4f;
-        letter-spacing: 1px;
-    }
 }
 
 .partners {
