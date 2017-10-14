@@ -18,9 +18,11 @@
     }
 }
 
-.mobile {
-    .banner {
-        height: 100%;
+@media all and (max-device-height: 789px) {
+    .mobile {
+        .banner {
+            height: 100%;
+        }
     }
 }
 
