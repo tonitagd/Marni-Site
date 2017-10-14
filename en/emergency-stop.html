@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset=windows-1251">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="author" content="MARNI">
     <meta name="description" content="MARNI">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="keywords" content="marni, марни, remont, mashini, avtomatizaciq, obnovlenie, motorna, spirachka, CNC, strugove, dyrvoobrabotvashti mashini, metalorejeshti mashini, ремонт, автоматизация, машини, моторна, спирачка, ЦНЦ, стругове, дървообработващи машини, металорежещи машини ">
     <title>MARNI Engineering</title>
     <script src="../scripts/modernizr.js"></script>
@@ -16,14 +16,13 @@
     <link rel="stylesheet" href="../styles/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="../styles/public/stylesheets/style.css">
 </head>
-<!-- sass --watch styles/sass:styles/public/stylesheets -->
 
 <body>
     <header class="navbar navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <img src="../images/marni_only.png"></img>
-            <img id="arrow" class="transition" src="../images/arrow.png"></img>
-        </div>
+        <a href="./index.html" class="navbar-header">
+            <img src="../images/marni_only.png" />
+            <img id="arrow" class="transition" src="../images/arrow.png" />
+        </a>
         <div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0">Menu</a></div>
         <div id="languages">
             <a href="javascript:loadLanguage('en')"><img class="flag" src="../images/en.png" /></a>
@@ -34,7 +33,7 @@
         <ul class="nav navbar-nav marni-navigation">
             <li><a href="index.html" data-hover="About us" class="transition">About us</a></li>
             <li><a href="services.html" data-hover="Services" class="transition">Services</a></li>
-            <li><a data-hover="Products" class="active transition dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down left"></span>Products<span class="glyphicon glyphicon-menu-down right"></a>
+            <li><a data-hover="Products" class="active transition dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-down left"></span>Products<span class="glyphicon glyphicon-menu-down right"></span></a>
                 <ul class="sub-menu">
                     <li><a class="active" href="emergency-stop.html">Emergency stops</a></li>
                     <li><a href="fanuc-module.html">I/O Fanuc management module</a></li>
@@ -45,8 +44,6 @@
         </ul>
     </nav>
     <main>
-        <section class="banner-products">
-        </section>
         <div class="products-container">
             <section class="container">
                 <article class="col-md-8">
@@ -54,6 +51,32 @@
                         <h2>MB emergency stops</h2>
                         <h3>Copywrite <strong>Marni Engineering</strong></h3>
                     </div>
+                    <div class="product-images">
+                        <ul>
+                            <li class=" work animated fadeIn" data-cat="1">
+                                <figure> <img src="../images/emergency-stop/header-image-cropped.png">
+                                    <figcaption>
+                                        <section>
+                                            <h5> <a href="../images/emergency-stop/header-image-cropped.png" target="_blank"><i class="glyphicon glyphicon-search"></i></a></h5>
+                                        </section>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <aside class="col-md-4">
+                    <section>
+                        <h3>Purpose</h3>
+                        <p>Range of devices for electric dynamic braking of AC motors with maximum current 150A, maximum voltage 440V and working range from 1 to 15 sec.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Operating principle</h3>
+                        <p>Dropping of direct current through two of the motor windings during one half of the supply voltage and short coupling of the dips during the other half-period. The current value depends on the position of the trimmer and the motor power. the braking performance is determined by the trimmer and can be set within a range of 1 to 15 seconds depending on the type of emergency brake.</p>
+                    </section>
+                </aside>
+                <article class="col-md-12">
                     <table class="container table">
                         <thead>
                             <tr>
@@ -135,17 +158,6 @@
                         </tbody>
                     </table>
                 </article>
-                <aside class="col-md-4">
-                    <section>
-                        <h3>Purpose</h3>
-                        <p>Range of devices for electric dynamic braking of AC motors with maximum current 150A, maximum voltage 440V and working range from 1 to 15 sec.
-                        </p>
-                    </section>
-                    <section>
-                        <h3>Operating principle</h3>
-                        <p>Dropping of direct current through two of the motor windings during one half of the supply voltage and short coupling of the dips during the other half-period. The current value depends on the position of the trimmer and the motor power. the braking performance is determined by the trimmer and can be set within a range of 1 to 15 seconds depending on the type of emergency brake.</p>
-                    </section>
-                </aside>
             </section>
         </div>
         <div class="container additional-info">
@@ -167,7 +179,7 @@
                                 <figure> <img src="../images/emergency-stop/scheme1.svg" alt="">
                                     <figcaption>
                                         <section>
-                                            <h5> <a href="../images/emergency-stop/scheme1.svg"><i class="glyphicon glyphicon-search"></i></a></h5>
+                                            <h5> <a href="../images/emergency-stop/scheme1.svg" target="_blank"><i class="glyphicon glyphicon-search"></i></a></h5>
                                         </section>
                                     </figcaption>
                                 </figure>
@@ -176,7 +188,7 @@
                                 <figure> <img src="../images/emergency-stop/scheme2.svg" alt="">
                                     <figcaption>
                                         <section>
-                                            <h5> <a href="../images/emergency-stop/scheme2.svg"><i class="glyphicon glyphicon-search"></i></a></h5>
+                                            <h5> <a href="../images/emergency-stop/scheme2.svg" target="_blank"><i class="glyphicon glyphicon-search"></i></a></h5>
                                         </section>
                                     </figcaption>
                                 </figure>
@@ -207,7 +219,7 @@
                                 <figure> <img src="../images/emergency-stop/scheme3en.svg" alt="">
                                     <figcaption>
                                         <section>
-                                            <h5> <a href="../images/emergency-stop/scheme3en.svg"><i class="glyphicon glyphicon-search"></i></a></h5>
+                                            <h5> <a href="../images/emergency-stop/scheme3en.svg" target="_blank"><i class="glyphicon glyphicon-search"></i></a></h5>
                                         </section>
                                     </figcaption>
                                 </figure>

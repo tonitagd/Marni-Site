@@ -17,6 +17,10 @@ html * {
     -moz-osx-font-smoothing: grayscale;
 }
 
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+
 *,
 *:after,
 *:before {
@@ -211,7 +215,7 @@ main {
 
     @include MQ(M) {
         margin-top: 80px;
-        height: calc(100% - 80px);
+        height: calc(100% - 120px);
     }
 
 }
