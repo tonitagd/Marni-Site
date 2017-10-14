@@ -208,16 +208,17 @@ body > header {
 
 main {
     position: relative;
-    height: calc(100% - 50px);
+    height: calc(100% - 130px);
     margin-top: 50px;
 
     z-index: $main-zindex;
+}
 
+body:not(.mobile) main {
     @include MQ(M) {
         margin-top: 80px;
         height: calc(100% - 120px);
     }
-
 }
 
 
