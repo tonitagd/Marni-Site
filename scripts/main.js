@@ -57,11 +57,11 @@ function move_navigation($navigation, $MQ) {
 }
 
 function loadLanguage(language) {
-    var languages = ['bg', 'en'];
+    var languages = ['/bg/', '/en/'];
     var sitePath = location.pathname;
 
     for (var i = 0; i < languages.length; i++) {
-        sitePath = sitePath.replace(languages[i], language);
+        sitePath = sitePath.replace(languages[i], "/" + language + "/");
     }
 
     if (location.pathname !== sitePath) {

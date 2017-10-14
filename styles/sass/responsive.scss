@@ -45,7 +45,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .mobile {
         header .navbar-header,
         .navbar-nav>li {
@@ -57,7 +57,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
     .mobile {
         .navbar-header {
             width: auto;
