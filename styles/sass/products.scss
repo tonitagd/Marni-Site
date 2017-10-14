@@ -34,7 +34,6 @@ body:not(.mobile) .product-images-container {
         padding: 0;
         li {
             display: inline-block;
-            @include box-shadow(0, 0, 0, 1px, #fff);
             overflow: hidden;
             position: relative;
 
