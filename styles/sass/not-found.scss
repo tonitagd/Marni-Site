@@ -1,0 +1,54 @@
+.not-found {
+    background: url(../../../images/404.svg) no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    background-color: #4a714a;
+    .vertical-align {
+        position: relative;
+        top: 50%;
+        @include translate(0, -50%);
+        width: 44%;
+        float: right;
+        margin-top: 80px;
+        h1 {
+            color: #ff8e1d;
+            font-size: 6rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+        }
+        h3 {
+            color: #dedede;
+            letter-spacing: 2px;
+            margin: 25px 0;
+        }
+        button {
+            padding: 10px;
+            a,
+            a:hover,
+            a:active {
+                color: white;
+                padding: 20px;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+@media all and (max-device-width: 1024px) {
+    .not-found {
+        .vertical-align {
+            top: 40%;
+            width: 100%;
+            padding: 15px;
+            h1 {
+                font-size: 3rem;
+            }
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -23,7 +23,13 @@ jQuery(document).ready(function($) {
             $shadow_layer.removeClass('is-visible');
             $('body').removeClass('overflow-hidden');
         }
+    });
 
+    $("main").niceScroll({
+        cursorcolor:"#ccc",
+        cursorwidth:"10px",
+        cursorborder:"none",
+        cursorborderradius:0
     });
 });
 
