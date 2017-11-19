@@ -1,7 +1,7 @@
 .services-container {
     padding-top: 96px;
     .col-md-6 {
-        figure {
+        figure:not(.normal-width) {
             float: left;
             width: 69px;
             .icon {

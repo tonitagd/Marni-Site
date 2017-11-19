@@ -26,11 +26,19 @@ jQuery(document).ready(function($) {
     });
 
     $("main").niceScroll({
-        cursorcolor:"#ccc",
-        cursorwidth:"10px",
-        cursorborder:"none",
-        cursorborderradius:0
+        cursorcolor: "#ccc",
+        cursorwidth: "10px",
+        cursorborder: "none",
+        cursorborderradius: 0
     });
+
+    $('#imagesModal').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var recipient = button[0].dataset['imgsrc'] // Extract info from data-* attributes
+        var modal = $(this)
+        modal.find('.modal-body img')[0].src = recipient;
+    });
+
 });
 
 function toggle_panel_visibility($lateral_panel, $background_layer, $body) {

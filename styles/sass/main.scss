@@ -8,6 +8,8 @@
 @import "services.scss";
 @import "icons.scss";
 @import "not-found.scss";
+@import "modal.scss";
+@import "slider.scss";
 
 html {
     height: 100%;
@@ -22,7 +24,7 @@ body {
     overflow: hidden;
     main {
         overflow-y: auto;
-        p {
+        p, li {
             font-weight: 400;
             font-size: 15px;
             line-height: 23px;
