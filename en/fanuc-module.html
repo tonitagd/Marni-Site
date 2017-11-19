@@ -57,7 +57,7 @@
                                 <figure> <img src="../images/fanuc-module/header-image-cropped.png">
                                     <figcaption>
                                         <section>
-                                            <h5> <a href="../images/fanuc-module/header-image-cropped.png" target="_blank"><i class="glyphicon glyphicon-search"></i></a></h5>
+                                            <h5>  <button data-toggle="modal" data-target="#imagesModal"  data-imgsrc="../images/fanuc-module/header-image-cropped.png" target="_blank"><i class="glyphicon glyphicon-search"></i></button></h5>
                                         </section>
                                     </figcaption>
                                 </figure>
@@ -88,6 +88,18 @@
             </div>
         </footer>
     </main>
+    <!-- Modal -->
+    <div class="modal fade bs-example-modal-lg" id="imagesModal" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <img src="" />
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../scripts/jquery-3.2.1.min.js"></script>
     <script src="../scripts/jquery.nicescroll.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
