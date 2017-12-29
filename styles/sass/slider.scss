@@ -4,143 +4,42 @@
         position: absolute;
         z-index: 10;
         right: 0;
-        margin: 10px;
         width: 25px;
-        color: $green-color;
+        color: white;
         background-color: rgba(0, 0, 0, .7);
         text-align: center;
         text-shadow: none;
         opacity: .4;
-        background-clip: padding-box;
-        &:hover{
+        &:hover {
             opacity: 1;
         }
     }
 }
 
-.jssorl-009-spin {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.carousel-inner {
+
+    .item {
+        img {
+            width: 980px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+
+.carousel-indicators {
+    position: static;
+    z-index: 15;
     width: 100%;
-    height: 100%;
+    padding-left: 0;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    img {
-        animation-name: jssorl-009-spin;
-        animation-duration: 1.6s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        margin-top: -19px;
-        position: relative;
-        top: 50%;
-        width: 38px;
-        height: 38px;
-    }
-}
-
-@keyframes jssorl-009-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#jssor_1 {
-    position: relative;
-    margin: 0 auto;
-    top: 0px;
-    left: 0px;
-    width: 980px;
-    height: 380px;
-    overflow: hidden;
-    visibility: hidden;
-    .slides {
-        cursor: default;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: 980px;
-        height: 380px;
-        overflow: hidden;
-    }
-}
-
-
-.jssorb052 {
-    .i {
-        position: absolute;
-        cursor: pointer;
-        .b {
-            fill: #000;
-            fill-opacity: 0.3;
-        }
-        &:hover .b {
-            fill-opacity: .7;
-        }
-        &.idn {
-            opacity: .3;
-        }
-    }
-
-    .iav .b {
-        fill-opacity: 1;
-    }
-    &.navigator {
-        position: absolute;
-        bottom: 12px;
-        right: 12px;
-        .i {
-            width: 16px;
-            height: 16px;
-            svg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-}
-
-.jssora053 {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    width: 55px;
-    height: 55px;
-    top: 0px;
-    &.left {
-        left: 25px;
-    }
-    &.right {
-        right: 25px;
-    }
-    &:hover {
-        opacity: .8;
-    }
-    &.jssora053dn {
-        opacity: .5;
-    }
-    &.jssora053ds {
-        opacity: .3;
-        pointer-events: none;
-    }
-    svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .a {
-        fill: none;
-        stroke: #fff;
-        stroke-width: 640;
-        stroke-miterlimit: 10;
+    list-style: none;
+    background: $green-color;
+    margin: 0;
+    line-height: 25px;
+    .active {
+        width: 10px;
+        height: 10px;
     }
 }
