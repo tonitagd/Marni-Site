@@ -1,10 +1,7 @@
-@import "bourbon/_bourbon.scss";
-
 @import "partials/variables.scss"; // colors, fonts etc...
 @import "partials/mixins.scss"; // custom mixins
 @import "partials/layout.scss"; // responsive grid and media queries
 @import "constants.scss";
-
 
 /* --------------------------------
 
@@ -20,13 +17,6 @@ html * {
 header, section, footer, aside, nav, main, article, figure {
     display: block; 
 }
-
-*,
-*:after,
-*:before {
-    @include box-sizing(border-box);
-}
-
 body {
     &.overflow-hidden {
         /* prevent 2 vertical scrollbars on ie and firefox when the cart is visible */
@@ -96,19 +86,15 @@ body > header {
 
 #languages {
     right: 0;
+    /* cart right margin on desktop */
 
-    @include MQ(L) {
-        /* cart right margin on desktop */
-        right: 0;
-
-        a {
-            position: relative;
-            width: 100px;
-            border-left: none;
-            img.flag {
-                width: 35px;
-                margin-right: 5px;
-            }
+    a {
+        position: relative;
+        width: 100px;
+        border-left: none;
+        img.flag {
+            width: 35px;
+            margin-right: 5px;
         }
     }
 }
