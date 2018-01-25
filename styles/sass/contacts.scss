@@ -23,8 +23,15 @@
         h3 {
             font-size: 16px;
         }
-        p.mail {
-            padding-bottom: 23px;
+        p {
+            a,
+            a:hover,
+            a:focus a:active {
+                color: inherit;
+            }
+            .mail {
+                padding-bottom: 23px;
+            }
         }
     }
 }
