@@ -11,6 +11,23 @@ jQuery(document).ready(function($) {
         toggle_panel_visibility($menu_navigation, $shadow_layer, $('body'));
     });
 
+    $(document).mouseup(function(e) {
+        var image = $(".cd-img-replace");
+        if ($hamburger_icon.is(e.target) || image.is(e.target)) {
+            return;
+        }
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!$menu_navigation.is(e.target) && $menu_navigation.has(e.target).length === 0) {
+            toggle_panel_visibility($menu_navigation, $shadow_layer, $('body'), true);
+        }
+    });
+
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) {
+            toggle_panel_visibility($menu_navigation, $shadow_layer, $('body'), true);
+        }
+    });
+
 
     //move #main-navigation inside header on laptop
     //insert #main-navigation after header on mobile
@@ -41,8 +58,8 @@ jQuery(document).ready(function($) {
 
 });
 
-function toggle_panel_visibility($lateral_panel, $background_layer, $body) {
-    if ($lateral_panel.hasClass('speed-in')) {
+function toggle_panel_visibility($lateral_panel, $background_layer, $body, shouldCollapse) {
+    if (shouldCollapse || $lateral_panel.hasClass('speed-in')) {
         // firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
         $lateral_panel.removeClass('speed-in').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
             $body.removeClass('overflow-hidden');
