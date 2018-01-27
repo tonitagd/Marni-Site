@@ -94,7 +94,15 @@ body:not(.mobile) .product-images-container {
             }
         }
     }
-    button, a {
+    button{
+        outline: none;
+        background: none;
+        margin: 0 auto;
+         display: block;
+         border: none;
+         margin: 0 auto;
+    }
+    i, a {
         display: block;
         text-align: center;
         width: 46px;
