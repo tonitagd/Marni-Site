@@ -54,3 +54,15 @@
         }
     }
 }
+
+.mobile {
+    #languages {
+        a {
+            position: relative;
+            border-left: none;
+            display: inline-flex;
+            align-items: center;
+            width: auto;
+        }
+    }
+}
