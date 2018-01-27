@@ -193,7 +193,7 @@ body:not(.mobile) #main-nav {
                 margin-top: -5px;
                 padding: 0px;
                 background-color: white;
-                max-width: 240px;
+                position: fixed;
                 li {
                     line-height: 25px;
                     a {

@@ -99,3 +99,9 @@ function loadLanguage(language) {
         location.pathname = sitePath;
     }
 }
+jQuery(".sub-menu-parent").ready(function($) {
+    $(".sub-menu-parent .sub-menu")[0].style.width = $(".sub-menu-parent").width() + "px";
+    $(window).on('resize', function() {
+        $(".sub-menu-parent .sub-menu")[0].style.width = $(".sub-menu-parent").width() + "px"
+    });
+});
