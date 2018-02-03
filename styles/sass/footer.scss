@@ -14,6 +14,11 @@ footer {
     color: #cccccc;
     font-size: 1.1em;
     padding: 0 20px;
+    .copy-right{
+        float: left;
+        font-size: 12px;
+        line-height: $footer-height;
+    }
     >div.contacts {
         float: right;
         line-height: $footer-height;
